@@ -1,23 +1,26 @@
+import { Outlet } from 'react-router-dom';
 import Navbar from './Navbar';
 import Sidebar from './Sidebar';
 import Footer from './Footer';
-import { ReactNode } from 'react';
 
-interface LayoutProps {
-  children: ReactNode;
-}
-
-const Layout = ({ children }: LayoutProps) => {
+const Layout = () => {
   return (
-    <div className="app">
+    <div className="flex flex-col min-h-screen bg-gray-50">
       <Navbar />
-      <div className="main-container">
-        <Sidebar />
-        <main className="content">
-          {children} {/* This will render the dynamic content */}
+      
+      <div className="flex flex-1">
+        {/* Sidebar - hidden on mobile, shown on md screens and up */}
+        <div className="hidden md:block w-64 bg-white shadow-md">
+          <Sidebar />
+        </div>
+        
+        {/* Main Content Area */}
+        <main className="flex-1 p-4 md:p-6 overflow-y-auto">
+          <Outlet />
         </main>
       </div>
-      <Footer />
+      
+      <Footer  />
     </div>
   );
 };
