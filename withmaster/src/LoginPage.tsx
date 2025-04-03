@@ -7,7 +7,7 @@ function LoginPage() {
     const handleLogin = (event: { preventDefault: () => void; }) => {
         event.preventDefault(); // Prevents form submission default behavior
         // Perform login logic here (e.g., API call)
-        navigate('/'); // Redirect to home page after login
+        navigate('layout'); // Redirect to home page after login
     };
 
     return (

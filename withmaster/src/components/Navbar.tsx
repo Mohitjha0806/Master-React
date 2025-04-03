@@ -25,13 +25,13 @@ const Navbar = () => {
       <div className={`${isOpen ? "block" : "hidden"} w-full md:block md:w-auto`} id="navbar-solid-bg">
         <ul className="flex flex-col font-medium mt-4 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
           <li>
-            <Link to="/" className="py-4 px-2 text-white font-semibold hover:text-blue-500 transition duration-300">Home</Link>
+            <Link to="/layout" className="py-4 px-2 text-white font-semibold hover:text-blue-500 transition duration-300">Home</Link>
           </li>
           <li>
-            <Link to="/about" className="py-4 px-2 text-white font-semibold hover:text-blue-500 transition duration-300">About</Link>
+            <Link to="/layout/about" className="py-4 px-2 text-white font-semibold hover:text-blue-500 transition duration-300">About</Link>
           </li>
           <li>
-            <Link to="/contact" className="py-4 px-2 text-white font-semibold hover:text-blue-500 transition duration-300">Contact</Link>
+            <Link to="/layout/contact" className="py-4 px-2 text-white font-semibold hover:text-blue-500 transition duration-300">Contact</Link>
           </li>
           <li>
             <Link to="/logoutPage" className="py-4 px-2 text-white font-semibold hover:text-blue-500 transition duration-300">Logout</Link>
